@@ -1,0 +1,160 @@
+body {
+    margin: 0px;
+    max-height: 100dvh;
+    background-color: rgb(78, 78, 82);
+}
+
+p {
+    margin: 0px;
+}
+
+
+.main-container {
+    --main-border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: calc(100% - var(--main-border-width) * 2);
+    width: 100%;
+    max-width: calc(100% - var(--main-border-width) * 2);
+    border-radius: 20px;
+    /* border: var(--main-border-width) solid black; */
+    overflow: hidden;
+}
+
+.dates-container {
+    height: 20%;
+    width: 100%;
+    background-color: rgb(28, 28, 37);
+    display: flex;
+    flex-direction: row;
+}
+
+.hide {
+    visibility: hidden;
+    
+}
+
+
+
+.timeblock-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.timeblock-overflow {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.invisible-container {
+    width: max-content;
+    text-wrap: nowrap;
+    height: 100%;
+    background-color: rgb(28, 28, 37);
+}
+
+.day-container {
+    width: calc(1/7 * 100%);
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.timeblock-labels-container {
+    /* box-sizing: border-box; */
+    width: max-content;
+    text-wrap: nowrap;
+    height: fit-content;
+    background-color: darkgray;
+    /* overflow-y: scroll; */
+    /* overflow-y: hidden; */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+
+}
+
+/* .timeblock-labels {
+
+    width: auto;
+    height: 200%;
+
+    display: flex;
+    flex-direction: column;
+
+    
+} */
+
+.timeblock-label {
+    /* border-bottom: 1px solid black; */
+    background-color: rgb(120, 120, 161);
+    height: 100%;
+    width: 100%;
+    padding: 20px 30px;
+    /* border-bottom: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.timeblock-label::after {
+    content: "";
+    /* height: 30px; */
+    /* background-color: red; */
+    border: .5px solid black;
+    position: relative;
+    width: 100d;
+}
+
+.timeblock-swim-lane-container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.timeblock-swim-lane {
+    background-color: rgb(59, 59, 70);;
+    width: calc(1/7 * 100%);
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+.timeblock {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 100%;
+
+    /* height: 100%; */
+}
+
+
+
+/* .top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+} */
+
+.timeblock-container::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.timeblock-container::-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+}
+
+.timeblock-container::-webkit-scrollbar-thumb {
+  background-color: gray;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
+}
